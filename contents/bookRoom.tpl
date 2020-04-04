@@ -7,14 +7,14 @@
     <meta name="author" content="">
   <!-- styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-<!-----  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   <link href="assets/css/prettyPhoto.css" rel="stylesheet">
   <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
   <link href="assets/css/flexslider.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/color/default.css" rel="stylesheet">
------>
+ 
  	
  </head>
  <body>
@@ -29,11 +29,11 @@
   <div align="center"style="color:red;"><?=$this->error;?></div><br>
   <? } ?>  	
   
-        <div class="container" align="center"> 
+        <div class="container"> 
         <div class="row">
-           <div class="span3"></div>
+           <div class="span2"></div>
             <div class="span6">
-	          <form action="" method="post" style="border-width:1px; border-style: solid; border-radius:5px; padding: 25px;" class="btn btn-info">
+	          <form action="" method="post" style="border-width:1px; border-style: solid; border-radius:5px; padding: 25px;">
 	          <div class="row">
 	          <div class="span5">
 	          
@@ -68,7 +68,22 @@
 	           <br/>        	
 	          </form>
 	        </div> 
-	      <div class="span3"></div> 
+	      <div class="span4" style=" height:330px; background-color: #6fff98; overflow-y: scroll;">
+	      
+ 
+	      	<?for($i = 0; $i < count($status); $i++){ ?>
+	      	 <div style="color: red; border-style: solid; border-width: 1px; border-color:red;padding:15px; ">
+	      	  <?=$status[$i]['name'];?>
+	      	  <br />
+	      	Занято от: <?=$status[$i]['fromdate'];?> / <?=$status[$i]['fromtime'];?>
+	      	  <br />
+	      	  до  <?=$status[$i]['totime'];?>	      	  
+	      	  </div>
+	      	  <br>
+	      	<? } ?>
+	      	
+	      	 
+	      </div> 
          </div>
         </div>          
        
